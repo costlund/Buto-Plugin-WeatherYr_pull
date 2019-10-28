@@ -1,0 +1,27 @@
+version: 1.0.0
+history:
+  1.0.0:
+    date: '2019-10-28'
+    title: 'First version.'
+    description: 'Manifest created.'
+plugin:
+  -
+    name: wf/array
+    version: 1.0.1
+  -
+    name: mysql/builder
+    version: 1.0.0
+  -
+    name: wf/mysql
+    version: 1.10.1
+sys:
+  -
+    name: mercury
+    version:
+      - '1.0'
+php:
+  - '7.2'
+author: null
+links: null
+description: ''
+third_part_software: null

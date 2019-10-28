@@ -1,0 +1,6 @@
+weather_yr_varsel:
+  where:
+    weather_yr_varsel.location_name:
+      value: _
+    weather_yr_varsel.date_time:
+      value: '2001-01-01 01:01:01'

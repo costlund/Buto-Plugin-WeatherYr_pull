@@ -1,0 +1,55 @@
+tables:
+  weather_yr_varsel:
+    field:
+      id:
+        type: varchar(50)
+        not_null: true
+        primary_key: true
+      url:
+        type: varchar(255)
+      location_name:
+        type: varchar(255)
+        not_null: true
+        primary_key: true
+      sun_rise:
+        type: datetime
+      sun_set:
+        type: datetime
+      date_time:
+        type: datetime
+        not_null: true
+        primary_key: true
+      windDirection_deg:
+        type: double(11,1)
+      windDirection_code:
+        type: varchar(10)
+      windSpeed_mps:
+        type: double(11,1)
+      windSpeed_name:
+        type: varchar(50)
+      temperature_unit:
+        type: varchar(50)
+      temperature_value:
+        type: smallint(5)
+      pressure_unit:
+        type: varchar(50)
+      pressure_value:
+        type: double(11,1)
+      precipitation_value:
+        type: double(11,1)
+      precipitation_minvalue:
+        type: double(11,1)
+      precipitation_maxvalue:
+        type: double(11,1)
+extra:
+  _description: 'Extra field to add to each table if not exist in schema.'
+  field:
+    created_at:
+      type: timestamp
+      default: CURRENT_TIMESTAMP
+    updated_at:
+      type: timestamp
+    created_by:
+      type: varchar(50)
+    updated_by:
+      type: varchar(50)
