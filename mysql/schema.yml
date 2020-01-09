@@ -30,17 +30,54 @@ tables:
       temperature_unit:
         type: varchar(50)
       temperature_value:
-        type: smallint(5)
+        #type: smallint(5)
+        type: double(4,2)
       pressure_unit:
         type: varchar(50)
       pressure_value:
         type: double(11,1)
       precipitation_value:
-        type: double(11,1)
+        type: double(11,4)
       precipitation_minvalue:
-        type: double(11,1)
+        type: double(11,4)
       precipitation_maxvalue:
-        type: double(11,1)
+        type: double(11,4)
+      humidity:
+        description: 'fuktighet 0.00-1.00'
+        type: double(3,2)
+      dewPoint:
+        description: 'dagpunkt temp'
+        type: double(4,2)
+      windGust:
+        description: 'vindby 0.00-99.00'
+        type: double(4,2)
+      cloudCover:
+        description: 'molninghet 0.00-1.00'
+        type: double(3,2)
+      uvIndex:
+        description: 'solstrålning 0.000-?'
+        type: double(6,3)
+      visibility:
+        description: '0.000-10.000'
+        type: double(5,3)
+      ozone:
+        description: '0.0-300.0'
+        type: double(4,1)
+  weather_missing:
+    field:
+      id:
+        type: varchar(50)
+        not_null: true
+        primary_key: true
+      url:
+        type: varchar(255)
+        not_null: true
+      location_name:
+        type: varchar(255)
+        not_null: true
+      date:
+        type: date
+        not_null: true
 extra:
   _description: 'Extra field to add to each table if not exist in schema.'
   field:
